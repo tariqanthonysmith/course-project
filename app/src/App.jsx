@@ -44,6 +44,12 @@ const bookArray = [{
 }]
 
 function App() {
+
+  const getBook = (id) => {
+    let findBook = bookArray.filter(bookArray => bookArray.id === id)
+    console.log(findBook)
+  }
+
   return (
     <section className='booklist'>
       <EventExample/>
@@ -54,14 +60,16 @@ function App() {
             key={id}
             img={img}
             title={title} 
-            author={author}/>
+            author={author}
+            getbook={getBook(id)}/>
         )
       })}
     </section>
   );
 }
 
-function Book({ img, title, author, children}) {
+function Book({ img, title, author, children, getBook, id}) {
+
 
   return (
     <article className='book'>
@@ -69,6 +77,7 @@ function Book({ img, title, author, children}) {
       <h2>{title}</h2>
       <h4>{author}</h4>
       {children}
+      <button onClick={(e) => {getBook(id)}}>Click ME!</button>
     </article>
   );
 }
