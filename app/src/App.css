@@ -13,23 +13,35 @@ body {
   color: #222;
 }
 
+#heading {
+  background-image: radial-gradient(circle, #3d93a9, #3a8ba0, #368497, #337c8f, #307586);
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  color: white;
+}
+
 .booklist {
   width: 90vw;
   max-width: 1170px;
   margin: 5rem auto;
   display: grid;
-  gap: 2rem
+  gap: 2rem;
+  
 }
 
 .book img {
   width: 100%;
   object-fit: cover;
+  padding-top: 2rem;
 }
 
 .book {
   background-color: #fff;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 0rem;
   text-align: center;
 }
 
@@ -42,6 +54,16 @@ body {
   color: #617d98;
   margin-top: 0.5rem;
   font-size: 0.85rem;
+  padding-bottom: 1rem;
+}
+
+.number {
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
+  text-align: start;
+  background-color: #b95b16;
+  color: white;
+  width: max-content;
 }
 
 @media screen and (min-width: 768px) {
